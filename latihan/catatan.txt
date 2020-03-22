@@ -1,0 +1,1 @@
+untuk menginstall module pip harus mengunakan py -m pip [nama depedensi]

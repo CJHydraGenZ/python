@@ -46,3 +46,6 @@ elif pilihan =='4':
     print(num1,'/',num2,'=',bagi(num1,num2))
 else:
     print('inputan anda salah')
+
+
+
