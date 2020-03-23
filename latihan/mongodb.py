@@ -1,6 +1,4 @@
-
-from flask import Flask, jsonify, request
-from flask_pymongo import PyMongo
+import pymongo
 # app = flask(__name__)
 # mongo = pymongo(app)
 
@@ -45,3 +43,5 @@ for x in mycol.find():
 # sname = mycol.find().sort('name', 1)
 # for x in sname:
 #     print(x)
+
+
