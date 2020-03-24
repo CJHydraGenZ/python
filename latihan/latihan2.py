@@ -5,6 +5,8 @@ import random
 
 buah = ['apel', 'nanas', 'semangka', 'duren', 'manggis']
 
+
+
 print(len(buah))
 for i in buah:
     print(i)
