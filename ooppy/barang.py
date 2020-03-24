@@ -1,4 +1,4 @@
-class barang:
+class Barang:
     __pesan = 'init barang'
     nama = ''
     harga = ''
