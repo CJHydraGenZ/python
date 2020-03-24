@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_pymongo import PyMongo
 
+
 app = Flask(__name__)
 
 app.config['MONGO_DBNAME'] = 'dbrestapi'
