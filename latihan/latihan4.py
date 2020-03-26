@@ -60,4 +60,15 @@ print(bin(int(c, base=0) ^ ord('a')))
 # Xor
 # print(bin((0b1110 | 0b101) & ~(0b1110 & 0b101)))
 # print(bin((ord(b'c') | ord(b'a')) & ~(ord(b'c') & ord(b'a'))))
-np.bitwise_xor()
+# np.bitwise_xor()
+
+key = '10'
+keys = []
+for i in key:
+    keys.append(list(bin(ord(i))))
+
+print(ord('0'))
+print(keys)
+
+for i in range(0, 16):
+    print(keys[i])
