@@ -1,5 +1,6 @@
 import pymongo
 
+
 myclient = pymongo.MongoClient('mongodb://localhost:27017/')
 mydb = myclient['dbbarang']
 mycol = mydb['barang']
@@ -55,3 +56,4 @@ p.set_barang('ayam', 15000, 'makanan')
 # p.get_pesan()
 # p.update_barang('mei goreng', 'lalapan')
 # print(p., p.harga, p.jenis)
+

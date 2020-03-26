@@ -1,3 +1,1 @@
-from get import a
-
-a()
+from barang import Barang
