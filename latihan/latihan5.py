@@ -2,39 +2,32 @@
 arr = 'IGD CAHYA ARI WIBAWA'
 key = '10'
 # str ke des ke bin
-bint = []
+
+
+def strbin(arr):
+    arrc = []
+    for i in arr:
+        arrc.append(list(bin(ord(i))))
+    return arrc
+
+
+bint = strbin(arr)
 print('biner')
-for i in arr:
-    # print(bin(ord(i)))
-    bint.append(list(bin(ord(i))))
+
 
 print(bint)
 
-keys = []
-for i in key:
-    keys.append(list(bin(ord(i))))
+keys = strbin(key)
 
 
-print(len(bint))
-print('keys')
+def looplenstr(l, length):
+    loopkey = []
+    for i in range(len(length)):
+        loopkey.append(l)
+    return loopkey
 
-keysb = []
-for i in range(len(bint)):
-    # print(keys)
 
-    keysb.append(keys)
-    # keysb.fromkeys(dict(keys))
-
-print(len(keysb))
-# print(keysb)
-# a = np.bitwise_xor(bint[0], keysb[0])
-# c = bin(bint ^ keysb)
-# print(c)
-# print(int(bin(ord('c') ^ ord('a')), base=0))
-# print()
-# print('gabungam')
-# ab = [a for a in bint+keysb if (a not in bint) or (a not in keysb)]
-# print(ab)
+keysb = looplenstr(keys, bint)
 
 
 def strconverter(s):
@@ -52,74 +45,47 @@ def arrconverted(ar):
     return arc
 
 
-print(arrconverted(keysb))
+# print(arrconverted(keysb))
 
 print('batas')
-# print(arrconverted(len(keysb), bint, keysb))
-# print(arrconverted(bint, keysb))
 
-
-# def xor(p, k):
-#     xorr = []
-#     for i in range(len(bint)):
-#         if p[i] == k[i]:
-#             x = int(p, base=36) ^ int(k, base=36)
-#             print(x)
-#             xorr.append(x)
-#             # for i in k:
-#             #     print(i)
-#     return xorr
 keynya = arrconverted(keysb)
-c = []
-for i in range(len(bint)):
-    # print(len(bint))
-    if bint[i]:
-        x = int(str(strconverter(bint[i])), 0) ^ int(
-            str(strconverter(keynya[i])), 0)
-        c.append(chr(x))
-        # print(chr(x))
+
+
+def conarrdes(arr):
+    arr1 = []
+    for i in arr:
+        arr1.append(ord(i))
+    return arr1
+
+
+def xor(p, k):
+    c = []
+    for i in range(len(p)):
+        if p[i]:
+            x = int(str(strconverter(p[i])), 0) ^ int(
+                str(strconverter(k[i])), 0)
+
+            c.append(chr(x))
+    return c
+
+
+def dexor(c, k):
+    p = []
+    for i in range(len(c)):
+        if c[i]:
+            x = int(str(strconverter(c[i])), 0) ^ int(
+                str(strconverter(k[i])), 0)
+            p.append(chr(x))
+    return p
+
+
+c = xor(bint, keynya)
+print(conarrdes(c))
 print('cipher')
-print(c)
-# print('batas asas')
-# for i in range(len(keysb)):
-#     print(keysb[i])
-#     print(len(keysb))
-
-# a = strconverter(arrconverted(bint))
-# b = strconverter(arrconverted(keysb))
-# print('a')
-# # print(len(a))
-# print('b')
-# # print(len(b))
-# print('c')
-# c = xor(a, b)
-# print(c)
-# bint2 = []
-# for i in bint:
-#     # se += i
-#     for j in i:
-#         # print(j)
-#         bint2.append(j)
-#     # print(i)
-
-# print(arrconverted(bint))
-# a = arrconverted(bint)
-# b = arrconverted(keysb)
-# c = strconverter(a)
-# d = strconverter(b)
-# e = int(c, base=0) ^ int(d, base=0)
-
-# # a = "11011111101100110110011001011101000"
-# # b = "11001011101100111000011100001100001"
-# # y = int(a,2) ^ int(b,2)
-# # print '{0:b}'.format(y)
-# print(bin(e))
-# print(b)
-
-# print(se)
-# for i in bint:
-#     liststring =
-#     print(i)
-# res = reduce(bint ^ keysb)
-# print(res)
-# print(converter(bint))
+print(xor(bint, keynya))
+print('p cipher')
+print(strbin(c))
+print('dexor')
+ck = strbin(c)
+print(dexor(ck, keynya))
